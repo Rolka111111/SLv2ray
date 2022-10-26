@@ -18,10 +18,6 @@ systemctl restart ssrmu
 systemctl restart ws-tls
 systemctl restart ws-nontls
 systemctl restart xray.service
-systemctl restart shadowsocks-libev
-systemctl restart xl2tpd
-systemctl restart pptpd
-systemctl restart ipsec
 systemctl restart accel-ppp
 systemctl restart ws-ovpn
 systemctl restart wg-quick@wg0
