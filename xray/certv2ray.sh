@@ -14,7 +14,7 @@ LIGHT='\033[0;37m'
 clear
 echo start
 sleep 0.5
-source /var/lib/akbarstorevpn/ipvps.conf
+source /var/lib/smartlifevpn/ipvps.conf
 domain=$(cat /etc/xray/domain)
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 cd /root/
