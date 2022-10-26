@@ -1,13 +1,13 @@
 ### Command Install
 
 ```
-rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/Slehibot/V2vps/main/setup.sh && chmod +x setup.sh && ./setup.sh
+rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/Slehibot/SLv2ray/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
-### Fitur Script
+### Smart Life Auto Script
 • SSH & OpenVPN
 
-• SSH TLS & No TLS
+• SSH TLS & Non TLS
 
 • XRAY VMESS 
 
@@ -27,7 +27,7 @@ rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ip
 
 • Stunnel5                : 443, 445, 777
 
-• Dropbear                : 443, 109, 143
+• Dropbear                : 109, 143
 
 • Squid Proxy             : 3128, 8080
 
@@ -59,7 +59,7 @@ rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ip
 
 • Autoreboot On 05.00 GMT +7
 
-• Futo Delete Expired Account
+• Auto Delete Expired Account
 
 • Full Orders For Various Services
 

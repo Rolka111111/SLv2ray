@@ -43,10 +43,6 @@ wget https://${lakmalvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/ins-xray.sh
-rm -f /root/ipsec.sh
-rm -f /root/set-br.sh
-rm -f /root/edu.sh
-rm -f /root/ohp.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
