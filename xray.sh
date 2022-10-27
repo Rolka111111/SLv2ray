@@ -27,7 +27,7 @@ cat << EOF > /usr/local/etc/xray/config0.json
 {
     "inbounds": [
 	{
-	"port": 80,
+	"port": 555,
 	"protocol": "vmess",
 	"tag":"http",
 	"settings": {
@@ -91,7 +91,7 @@ cat << EOF > /usr/local/etc/xray/config1.json
 {
     "inbounds": [
 	{
-            "port": 443,
+            "port": 8445,
             "protocol": "vless",
 			"tag":"XTLS",
             "settings": {
