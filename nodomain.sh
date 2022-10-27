@@ -20,8 +20,8 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 #adding new configuration files 
 
-rm -rf /usr/local/etc/xray/config.json
-cat << EOF > /usr/local/etc/xray/config.json
+rm -rf /usr/local/etc/xray/configno.json
+cat << EOF > /usr/local/etc/xray/configno.json
 {
   "log": {
     "loglevel": "warning"
