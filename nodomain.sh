@@ -118,7 +118,7 @@ cat << EOF > /usr/local/etc/xray/configno.json
       }
     },
     {
-      "port": 550,
+      "port": 555,
       "protocol": "vmess",
       "settings": {
         "clients": [
