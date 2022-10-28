@@ -180,11 +180,6 @@ cat << EOF > /usr/local/etc/xray/configno.json
 }
 EOF
 
-mkdir /etc/xray
-cp xray.key /etc/xray/xray.key
-cp xray.crt /etc/xray/xray.crt
-chmod 644 /etc/xray/xray.key
-
 #starting xray core on sytem startup
 
 systemctl enable xray
