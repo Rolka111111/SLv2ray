@@ -46,7 +46,7 @@ exit
 ;;
 7)
 clear
-addxray
+xraymenu
 *)
 clear
 menu
