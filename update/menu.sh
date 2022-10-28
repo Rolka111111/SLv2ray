@@ -15,10 +15,10 @@ echo -e "$yy 2$y.  VMESS MENU$wh"
 echo -e "$yy 3$y.  VLESS MENU$wh"
 echo -e "$yy 4$y.  TROJAN GFW MENU$wh"
 echo -e "$yy 5$y.  Settings$wh"
-echo -e "$yy 6$y.  Exit$wh"
-echo -e "$yy 7$y.  Xray Menu$wh"
+echo -e "$yy 6$y.  Xray Menu$wh"
+echo -e "$yy 7$y.  Exit$wh"
 echo -e "$y-------------------------------------------------$wh"
-read -p "Select From Options [ 1 - 6 ] : " menu
+read -p "Select From Options [ 1 - 7 ] : " menu
 case $menu in
 1)
 clear
@@ -42,11 +42,11 @@ setmenu
 ;;
 6)
 clear
-exit
+xraymenu
 ;;
 7)
 clear
-xraymenu
+exit
 *)
 clear
 menu
