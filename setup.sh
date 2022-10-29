@@ -63,7 +63,8 @@ chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
 echo " "
-echo "Installation has been completed!!"echo " "
+echo "Installation has been completed!!"
+echo " "
 echo "============================================================================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "----------------------------------------------------------------------------" | tee -a log-install.txt
