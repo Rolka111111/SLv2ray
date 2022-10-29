@@ -20,8 +20,8 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 #adding new configuration files 
 
-rm -rf /usr/local/etc/xray/configno.json
-cat << EOF > /usr/local/etc/xray/configno.json
+rm -rf /usr/local/etc/xray/config10.json
+cat << EOF > /usr/local/etc/xray/config10.json
 {
   "log": {
     "loglevel": "warning"
@@ -66,7 +66,7 @@ cat << EOF > /usr/local/etc/xray/configno.json
       "settings": {
         "clients": [
           {
-            "id": "113c3f98-d716-4e23-b2ca-7c7127103b1f",
+            "id": "$UUID",
             "flow": "xtls-rprx-direct"
           }
         ],
@@ -123,7 +123,7 @@ cat << EOF > /usr/local/etc/xray/configno.json
       "settings": {
         "clients": [
           {
-            "id": "113c3f98-d716-4e23-b2ca-7c7127103b1f"
+            "id": "$UUID"
           }
         ]
       },
