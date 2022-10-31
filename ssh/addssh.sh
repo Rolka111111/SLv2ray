@@ -15,8 +15,6 @@ LIGHT='\033[0;37m'
 
 domain=$(cat /etc/xray/domain)
 clear
-read -p "Username : " Login
-read -p "Password : " Pass
 read -p "Expired (Days): " masaaktif
 
 IP=$(wget -qO- ipinfo.io/ip);
