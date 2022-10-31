@@ -42,7 +42,7 @@ else
 domain=$IP2
 fi
 echo ""
-echo "Masukkan Password"
+echo "Enter Password"
 
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Password : " -e user
