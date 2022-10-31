@@ -1,4 +1,5 @@
 #!/bin/bash
+# My Telegram : https://t.me/SLboy1
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,6 +13,15 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/Slehibot/SLv2ray/main/ipvps.txt | grep $MYIP )
+if [ $MYIP = $MYIP ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}"
+exit 0
+fi
+clear
 read -p "Username : " User
 egrep "^$User" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
@@ -34,6 +44,7 @@ echo -e "    Days Added      :  $Days Days"
 echo -e "    Expires on      :  $Expiration_Display"
 echo -e ""
 echo -e "========================================"
+echo -e "Script by Lakmal Sandaru"
 else
 clear
 echo -e ""

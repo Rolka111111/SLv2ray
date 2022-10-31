@@ -13,13 +13,16 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 # ==================================================
-# Link Hosting Kalian
+# Link Hosting 
 lakmalvpn="raw.githubusercontent.com/Slehibot/SLv2ray/main/ssh"
 
-# Link Hosting Kalian Untuk Xray
+# Link Hosting Xray
 lakmalvpnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/xray"
 
-# Link Hosting Kalian Untuk Stunnel5
+# Link Hosting Trojan Go
+lakmalvpnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/trojango"
+
+# Link Hosting Stunnel5
 lakmalvpnnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/stunnel5"
 
 # initializing var
@@ -33,11 +36,11 @@ ver=$VERSION_ID
 #detail nama perusahaan
 country=ID
 state=Sri Lanka
-locality=Sri lanka
-organization=smartlifevpn
-organizationalunit=smartlifevpn
-commonname=smartlifevpn
-email=slehibot2@gmail.com
+locality=Sri Lanka
+organization=lakmalstorevpn
+organizationalunit=lakmalstorevpn
+commonname=lakmalstorevpn
+email=lakmal.lk@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://${lakmalvpn}/password"
@@ -124,8 +127,8 @@ apt install libssl-dev -y
 apt install libssl1.0-dev -y
 apt install dos2unix -y
 
-# set time GMT +5
-ln -fs /usr/share/zoneinfo/Asia/Colombo /etc/localtime
+# set time GMT +5.30
+ln -fs /usr/share/zoneinfo/Asia/Colombo /etc/localtime && date -R
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
@@ -287,7 +290,7 @@ cat > /etc/systemd/system/stunnel5.service << END
 [Unit]
 Description=Stunnel5 Service
 Documentation=https://stunnel.org
-Documentation=https://github.com/Akbar218
+Documentation=https://github.com/lakmal218
 After=syslog.target network-online.target
 
 [Service]
@@ -354,7 +357,7 @@ echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
 echo '.....done'
 echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
-echo 'Please send in your comments and/or suggestions to slehibot.xyz'
+echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
@@ -387,7 +390,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O addhost "https://${lakmalvpn}/addhost.sh"
 wget -O about "https://${lakmalvpn}/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Slehibot/V2vps/main/update/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/menu.sh"
 wget -O addssh "https://${lakmalvpn}/addssh.sh"
 wget -O trialssh "https://${lakmalvpn}/trialssh.sh"
 wget -O delssh "https://${lakmalvpn}/delssh.sh"
@@ -434,9 +437,16 @@ wget -O portsshnontls "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/w
 wget -O portsshws "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/websocket/portsshws.sh"
 
 wget -O sshovpnmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/sshovpn.sh"
+wget -O l2tpmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/l2tpmenu.sh"
+wget -O pptpmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/pptpmenu.sh"
+wget -O sstpmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/sstpmenu.sh"
+wget -O wgmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/wgmenu.sh"
+wget -O ssmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/ssmenu.sh"
+wget -O ssrmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/ssrmenu.sh"
 wget -O vmessmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/vmessmenu.sh"
 wget -O vlessmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/vlessmenu.sh"
 wget -O trmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/trmenu.sh"
+wget -O trgomenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/trgomenu.sh"
 wget -O setmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/setmenu.sh"
 
 
@@ -444,9 +454,16 @@ chmod +x portsshnontls
 chmod +x portsshws
 
 chmod +x sshovpnmenu
+chmod +x l2tpmenu
+chmod +x pptpmenu
+chmod +x sstpmenu
+chmod +x wgmenu
+chmod +x ssmenu
+chmod +x ssrmenu
 chmod +x vmessmenu
 chmod +x vlessmenu
 chmod +x trmenu
+chmod +x trgomenu
 chmod +x setmenu
 
 chmod +x addhost
@@ -471,6 +488,7 @@ chmod +x changeport
 chmod +x portovpn
 chmod +x portwg
 chmod +x porttrojan
+chmod +x portsstp
 chmod +x portsquid
 chmod +x portvlm
 chmod +x wbmn
@@ -489,6 +507,10 @@ chmod +x renewvmess
 chmod +x renewvless
 chmod +x renewtrojan
 chmod +x certv2ray
+chmod +x addtrgo
+chmod +x deltrgo
+chmod +x renewtrgo
+chmod +x cektrgo
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files

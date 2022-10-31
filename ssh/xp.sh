@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/SLboy1
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,31 +13,40 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-data=( `cat /var/lib/smartlifevpn/data-user-l2tp | grep '^###' | cut -d ' ' -f 2`);
+echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/Slehibot/SLv2ray/main/ipvps.txt | grep $MYIP )
+if [ $MYIP = $MYIP ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}"
+exit 0
+fi
+clear
+data=( `cat /var/lib/lakmalstorevpn/data-user-l2tp | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
 do
-exp=$(grep -w "^### $user" "/var/lib/smartlifevpn/data-user-l2tp" | cut -d ' ' -f 3)
+exp=$(grep -w "^### $user" "/var/lib/lakmalstorevpn/data-user-l2tp" | cut -d ' ' -f 3)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 if [[ "$exp2" = "0" ]]; then
-sed -i "/^### $user $exp/d" "/var/lib/smartlifevpn/data-user-l2tp"
+sed -i "/^### $user $exp/d" "/var/lib/lakmalstorevp/data-user-l2tp"
 sed -i '/^"'"$user"'" l2tpd/d' /etc/ppp/chap-secrets
 sed -i '/^'"$user"':\$1\$/d' /etc/ipsec.d/passwd
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 fi
 done
-data=( `cat /var/lib/smartlifevpn/data-user-pptp | grep '^###' | cut -d ' ' -f 2`);
+data=( `cat /var/lib/lakmalstorevpn/data-user-pptp | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
 do
-exp=$(grep -w "^### $user" "/var/lib/smartlifevpn/data-user-pptp" | cut -d ' ' -f 3)
+exp=$(grep -w "^### $user" "/var/lib/lakmalstorevpn/data-user-pptp" | cut -d ' ' -f 3)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 if [[ "$exp2" = "0" ]]; then
-sed -i "/^### $user $exp/d" "/var/lib/smartlifevpn/data-user-pptp"
+sed -i "/^### $user $exp/d" "/var/lib/lakmalstorevpn/data-user-pptp"
 sed -i '/^"'"$user"'" pptpd/d' /etc/ppp/chap-secrets
 chmod 600 /etc/ppp/chap-secrets*
 fi
@@ -76,16 +85,16 @@ cd
 fi
 done
 /etc/init.d/ssrmu restart
-data=( `cat /var/lib/smartlifevpn/data-user-sstp | grep '^###' | cut -d ' ' -f 2`);
+data=( `cat /var/lib/lakmalstorevpn/data-user-sstp | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
 do
-exp=$(grep -w "^### $user" "/var/lib/smartlifevpn/data-user-sstp" | cut -d ' ' -f 3)
+exp=$(grep -w "^### $user" "/var/lib/lakmalstorevpn/data-user-sstp" | cut -d ' ' -f 3)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 if [[ "$exp2" = "0" ]]; then
-sed -i "/^### $user $exp/d" "/var/lib/smartlifevpn/data-user-sstp"
+sed -i "/^### $user $exp/d" "/var/lib/lakmalstorevpn/data-user-sstp"
 sed -i '/^'"$user"'/d' /home/sstp/sstp_account
 fi
 done

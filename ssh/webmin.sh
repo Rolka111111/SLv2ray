@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/SLboy1
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,6 +13,15 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/Slehibot/SLv2ray/main/ipvps.txt | grep $MYIP )
+if [ $MYIP = $MYIP ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}"
+exit 0
+fi
+clear
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[Installed]${Font_color_suffix}"
 Error="${Red_font_prefix}[Not Installed]${Font_color_suffix}"
@@ -39,7 +48,7 @@ echo "  Done Install Webmin  "
 echo "======================="
 echo "http://$IP:10000"
 echo "======================="
-echo "Script By LamVpn"
+echo "Script By Lakmal Sandaru"
 }
 function restart () {
 echo " Restarting Webmin"
@@ -51,7 +60,7 @@ echo ""
 echo "======================="
 echo "  Done Restart Webmin  "
 echo "======================="
-echo "Script By LamVpn"
+echo "Script By Lakmal Sandaru"
 }
 function uninstall () {
 echo " Removing Repositori Webmin"
@@ -66,7 +75,7 @@ echo ""
 echo "========================="
 echo "  Done Uninstall Webmin  "
 echo "========================="
-echo "Script By SLvpn"
+echo "Script By Lakmal Sandaru"
 }
 if [[ "$cek" = "perl" ]]; then
 sts="${Info}"

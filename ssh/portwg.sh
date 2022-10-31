@@ -21,32 +21,32 @@ else
 echo -e "${NC}${RED}Permission Denied!${NC}"
 exit 0
 fi
+NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 clear
-tr="$(cat ~/log-install.txt | grep -w "Trojan" | cut -d: -f2|sed 's/ //g')"
+wg="$(cat ~/log-install.txt | grep -i Wireguard | cut -d: -f2|sed 's/ //g')"
 echo -e "======================================"
 echo -e ""
-echo -e "Change Port $tr"
+echo -e "Change Port $wg"
 echo -e ""
 echo -e "======================================"
-read -p "New Port Trojan : " tr2
-if [ -z $tr2 ]; then
+read -p "New Port Wireguard : " wg2
+if [ -z $wg2 ]; then
 echo "Please Input Port"
 exit 0
 fi
-cek=$(netstat -nutlp | grep -w $tr2)
+cek=$(netstat -nutlp | grep -w $wg2)
 if [[ -z $cek ]]; then
-sed -i "s/$tr/$tr2/g" /etc/xray/config.json
-sed -i "s/   - XRAYS Trojan         : $tr/   - XRAYS Trojan         : $tr2/g" /root/log-install.txt
-iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $tr -j ACCEPT
-iptables -D INPUT -m state --state NEW -m udp -p udp --dport $tr -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $tr2 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport $tr2 -j ACCEPT
+sed -i "s/$wg/$wg2/g" /etc/wireguard/wg0.conf
+sed -i "s/$wg/$wg2/g" /etc/wireguard/params
+sed -i "s/   - Wireguard               : $wg/   - Wireguard               : $wg2/g" /root/log-install.txt
+iptables -D INPUT -i $NIC -p udp --dport $wg -j ACCEPT
+iptables -I INPUT -i $NIC -p udp --dport $wg2 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
-systemctl restart xray.service > /dev/null
-echo -e "\e[032;1mPort $tr2 modified successfully\e[0m"
+systemctl reload wg-quick@wg0 > /dev/null
+echo -e "\e[032;1mPort $wg2 modified successfully\e[0m"
 else
-echo "Port $tr2 is used"
+echo "Port $wg2 is used"
 fi
