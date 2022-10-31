@@ -2,7 +2,7 @@
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
 # Centos 7 & 8 64bit 
-# By lakmal Maulana
+# By Lakmal Sandaru
 # My Telegram : https://t.me/SLboy1
 # ==========================================
 # Color
@@ -46,7 +46,7 @@ if [[ -e /etc/wireguard/params ]]; then
 	exit 1
 fi
 
-echo -e "${Info} Wireguard Script By lakmal Maulana"
+echo -e "${Info} Wireguard Script By Lakmal Sandaru"
 # Detect public IPv4 address and pre-fill for the user
 
 # Detect public interface and pre-fill for the user
