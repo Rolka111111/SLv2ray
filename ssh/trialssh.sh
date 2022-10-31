@@ -33,9 +33,9 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel5" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-Login=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
+Login=SLVPNTrial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hari="1"
-Pass=1
+Pass=SLVPN
 clear
 systemctl restart ws-tls
 systemctl restart ws-nontls
