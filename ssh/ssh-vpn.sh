@@ -34,13 +34,13 @@ source /etc/os-release
 ver=$VERSION_ID
 
 #detail nama perusahaan
-country=ID
-state=Sri Lanka
-locality=Sri Lanka
+country=SL
+state=SL
+locality=SL
 organization=lakmalstorevpn
 organizationalunit=lakmalstorevpn
 commonname=lakmalstorevpn
-email=lakmal.lk@gmail.com
+email=rglakmal.lk@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://${lakmalvpn}/password"
