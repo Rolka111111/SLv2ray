@@ -27,6 +27,7 @@ domain=$(cat /etc/xray/domain)
 else
 domain=$IP2
 fi
+read -p "Expired (Days): " masaaktif
 clear
 IP=$(wget -qO- ipinfo.io/ip);
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel5" | cut -d: -f2)"
@@ -34,7 +35,7 @@ sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 Login=SLVPN`</dev/urandom tr -dc X-Z0-9 | head -c4`
-hari="1"
+
 Pass=SLVPN
 clear
 systemctl restart ws-tls
@@ -48,7 +49,7 @@ hariini=`date -d "0 days" +"%Y-%m-%d"`
 expi=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "Information Trial SSH & OpenVPN"
+echo -e "Information SSH & OpenVPN"
 echo -e "=============================="
 echo -e "=   SMART LIFE VPS MANAGER   ="
 echo -e "=============================="
