@@ -30,7 +30,7 @@ domain=$IP
 fi
 tr="$(cat ~/log-install.txt | grep -w "Trojan" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
-		read -rp "Password : " -e user
+		
 		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${user_EXISTS} == '1' ]]; then
@@ -40,6 +40,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 		fi
 	done
 read -p "Expired (Days) : " masaaktif
+user=SLVPN`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#xray-trojan$/a\#&# '"$user $exp"'\
