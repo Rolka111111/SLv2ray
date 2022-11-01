@@ -30,7 +30,7 @@ domain=$IP
 fi
 tr="$(cat ~/log-install.txt | grep -w "Trojan" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
-		
+		read -rp "Password : " -e user
 		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${user_EXISTS} == '1' ]]; then
