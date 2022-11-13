@@ -21,7 +21,7 @@ apt -y install chrony
 timedatectl set-ntp true
 systemctl enable chronyd && systemctl restart chronyd
 systemctl enable chrony && systemctl restart chrony
-timedatectl set-timezone Asia/Jakarta
+timedatectl set-timezone Asia/Colombo
 chronyc sourcestats -v
 chronyc tracking -v
 date
@@ -340,8 +340,8 @@ END
 # / / Installation Xray Service
 cat > /etc/systemd/system/xray.service << END
 [Unit]
-Description=Xray Service By Akbar Maulana
-Documentation=https://t.me/Akbar218
+Description=Xray Service By Lakmal Sandaru
+Documentation=https://t.me/SLboy1
 After=network.target nss-lookup.target
 
 [Service]
@@ -458,8 +458,8 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service By Akbar Maulana
-Documentation=https://t.me/Akbar218
+Description=Trojan-Go Service By Lakmal Sandaru
+Documentation=https://t.me/SLboy1
 After=network.target nss-lookup.target
 
 [Service]
