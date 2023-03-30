@@ -14,16 +14,16 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 # ==================================================
 # Link Hosting 
-lakmalvpn="raw.githubusercontent.com/Slehibot/SLv2ray/main/ssh"
+lakmalvpn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/ssh"
 
 # Link Hosting Xray
-lakmalvpnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/xray"
+lakmalvpnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/xray"
 
 # Link Hosting Trojan Go
-lakmalvpnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/trojango"
+lakmalvpnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/trojango"
 
 # Link Hosting Stunnel5
-lakmalvpnnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/stunnel5"
+lakmalvpnnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/stunnel5"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -390,7 +390,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O addhost "https://${lakmalvpn}/addhost.sh"
 wget -O about "https://${lakmalvpn}/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/menu.sh"
 wget -O addssh "https://${lakmalvpn}/addssh.sh"
 wget -O trialssh "https://${lakmalvpn}/trialssh.sh"
 wget -O delssh "https://${lakmalvpn}/delssh.sh"
@@ -433,21 +433,21 @@ wget -O addtrgo "https://${lakmalvpnnn}/addtrgo.sh"
 wget -O deltrgo "https://${lakmalvpnnn}/deltrgo.sh"
 wget -O renewtrgo "https://${lakmalvpnnn}/renewtrgo.sh"
 wget -O cektrgo "https://${lakmalvpnnn}/cektrgo.sh"
-wget -O portsshnontls "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/websocket/portsshnontls.sh"
-wget -O portsshws "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/websocket/portsshws.sh"
+wget -O portsshnontls "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/websocket/portsshnontls.sh"
+wget -O portsshws "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/websocket/portsshws.sh"
 
-wget -O sshovpnmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/sshovpn.sh"
-wget -O l2tpmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/l2tpmenu.sh"
-wget -O pptpmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/pptpmenu.sh"
-wget -O sstpmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/sstpmenu.sh"
-wget -O wgmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/wgmenu.sh"
-wget -O ssmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/ssmenu.sh"
-wget -O ssrmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/ssrmenu.sh"
-wget -O vmessmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/vmessmenu.sh"
-wget -O vlessmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/vlessmenu.sh"
-wget -O trmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/trmenu.sh"
-wget -O trgomenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/trgomenu.sh"
-wget -O setmenu "https://raw.githubusercontent.com/Slehibot/SLv2ray/main/update/setmenu.sh"
+wget -O sshovpnmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/sshovpn.sh"
+wget -O l2tpmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/l2tpmenu.sh"
+wget -O pptpmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/pptpmenu.sh"
+wget -O sstpmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/sstpmenu.sh"
+wget -O wgmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/wgmenu.sh"
+wget -O ssmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/ssmenu.sh"
+wget -O ssrmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/ssrmenu.sh"
+wget -O vmessmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/vmessmenu.sh"
+wget -O vlessmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/vlessmenu.sh"
+wget -O trmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/trmenu.sh"
+wget -O trgomenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/trgomenu.sh"
+wget -O setmenu "https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/update/setmenu.sh"
 
 
 chmod +x portsshnontls
