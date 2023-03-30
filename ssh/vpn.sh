@@ -14,7 +14,7 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Slehibot/SLv2ray/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
@@ -24,7 +24,7 @@ fi
 # By Lakmal Sandaru
 # ==================================================
 # Link Hosting Kalian
-lakmalvpn="raw.githubusercontent.com/Slehibot/SLv2ray/main/ssh"
+lakmalvpn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/ssh"
 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
