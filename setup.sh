@@ -2,10 +2,10 @@
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
-fi
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
-		echo "OpenVZ is not supported"
-		exit 1
+#fi
+#if [ "$(systemd-detect-virt)" == "openvz" ]; then
+		#echo "OpenVZ is not supported"
+		#exit 1
 fi
 # ==========================================
 # Color
@@ -19,25 +19,25 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting SSH 
-lakmalvpn="raw.githubusercontent.com/Slehibot/SLv2ray/main/ssh"
+lakmalvpn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/ssh"
 # Link Hosting SSTP
-lakmalvpnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/sstp"
+lakmalvpnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/sstp"
 # Link Hosting SSR
-lakmalvpnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/ssr"
+lakmalvpnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/ssr"
 # Link Hosting Shadowsocks
-lakmalvpnnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/shadowsocks"
+lakmalvpnnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/shadowsocks"
 # Link Hosting Wireguard
-lakmalvpnnnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/wireguard"
+lakmalvpnnnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/wireguard"
 # Link Hosting Xray
-lakmalvpnnnnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/xray"
+lakmalvpnnnnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/xray"
 # Link Hosting Ipsec
-lakmalvpnnnnnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/ipsec"
+lakmalvpnnnnnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/ipsec"
 # Link Hosting Backup
-lakmalvpnnnnnnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/backup"
+lakmalvpnnnnnnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/backup"
 # Link Hosting Websocket
-lakmalvpnnnnnnnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/websocket"
+lakmalvpnnnnnnnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/websocket"
 # Link Hosting Ohp
-lakmalvpnnnnnnnnnn="raw.githubusercontent.com/Slehibot/SLv2ray/main/ohp"
+lakmalvpnnnnnnnnnn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
