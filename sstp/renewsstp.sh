@@ -22,7 +22,7 @@ echo -e "${NC}${RED}Permission Denied!${NC}";
 exit 0
 fi
 clear
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/akbarstorevpn/data-user-sstp")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/lakmalstorevpn/data-user-sstp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
