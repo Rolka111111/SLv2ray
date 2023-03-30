@@ -57,7 +57,7 @@ Tanggal       : $date
 ==================================
 " | mail -s "Backup Data" $email
 rm -rf /root/backup
-rm -r /root/$IP-$date.zip
+# rm -r /root/$IP-$date.zip
 clear
 echo -e "
 Detail Backup 
