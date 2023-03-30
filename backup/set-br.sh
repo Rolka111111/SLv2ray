@@ -14,7 +14,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 # Link Hosting 
-lakmalvpn="raw.githubusercontent.com/Slehibot/SLv2ray/main/backup"
+lakmalvpn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/backup"
 
 apt install rclone -y
 printf "q\n" | rclone config
