@@ -15,7 +15,7 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Slehibot/SLv2ray/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Rolka111111/SLv2ray/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
@@ -23,7 +23,7 @@ echo -e "${NC}${RED}Permission Denied!${NC}"
 exit 0
 fi
 # Link Hosting 
-lakmalvpn="raw.githubusercontent.com/Slehibot/SLv2ray/main/websocket"
+lakmalvpn="raw.githubusercontent.com/Rolka111111/SLv2ray/main/websocket"
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/ws-nontls https://${lakmalvpn}/websocket.py
