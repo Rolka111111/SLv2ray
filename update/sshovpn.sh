@@ -5,9 +5,9 @@ y="\033[0;1;37m"
 yy="\033[0;1;32m"
 yl="\033[0;1;33m"
 wh="\033[0m"
-echo -e "$y-----------------------------------------------------$wh"
-echo -e "$y                 SSH & OpenVPN $wh"
-echo -e "$y-----------------------------------------------------$wh"
+echo -e "$y-----------------------------------------------------$wh" |lolcat
+echo -e "$y                 SSH & OpenVPN $wh" |lolcat
+echo -e "$y-----------------------------------------------------$wh" |lolcat
 echo -e "$yy 1$y.  Create SSH & OpenVPN Account"
 echo -e "$yy 2$y.  Generate SSH & OpenVPN Trial Account"
 echo -e "$yy 3$y.  Extending SSH & OpenVPN Account Active Life"
@@ -20,7 +20,7 @@ echo -e "$yy 9$y.  Displays Users Who Do Multi Login SSH"
 echo -e "$yy 10$y. Restart All Service"
 echo -e "$yy 11$y. Main Menu"
 echo -e "$yy 12$y. Exit"
-echo -e "$y-----------------------------------------------------$wh"
+echo -e "$y-----------------------------------------------------$wh" |lolcat
 read -p "Select From Options [ 1 - 12 ] : " menu
 echo -e ""
 case $menu in
