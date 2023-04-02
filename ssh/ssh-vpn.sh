@@ -126,6 +126,7 @@ apt install zlib1g-dev -y
 apt install libssl-dev -y
 apt install libssl1.0-dev -y
 apt install dos2unix -y
+apt install lolcat -y
 
 # set time GMT +5.30
 ln -fs /usr/share/zoneinfo/Asia/Colombo /etc/localtime && date -R
